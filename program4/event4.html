@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example 3</title>
+</head>
+<body>
+
+<h2>My List</h2>
+
+<input type="text" id="item" placeholder="Enter item">
+<button id="addBtn">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+document.getElementById("addBtn").addEventListener("click", function() {
+
+    let value = document.getElementById("item").value;
+
+    if (value != "") {
+        let li = document.createElement("li");
+        li.innerHTML = value;
+
+        document.getElementById("list").appendChild(li);
+
+        document.getElementById("item").value = "";
+    }
+});
+</script>
+
+</body>
+</html>
